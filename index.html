@@ -1,0 +1,64 @@
+<DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <title>CSS grid</title>
+        <meta charset="uft-8" />
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 2em;
+                font-family: sans-serif;
+            }
+            
+            header {
+                background: yellow;
+                grid-area: h;
+            }
+            
+            main {
+                background: red;
+                grid-area: m;
+            }
+            
+            aside {
+                background: blue;
+                grid-area: a;
+            }
+            
+            footer {
+                background: green;
+                grid-area: f;
+            }
+            
+            .container {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: 20vh 70vh 10vh;
+                grid-template-areas: "h h" "m a" "f f";
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <strong>Header</strong>
+            </header>
+            <main>
+                <strong>Main</strong>
+            </main>
+            <aside>
+                <strong>Aside</strong>
+            </aside>
+            <footer>
+                <strong>Footer</strong>
+            </footer>
+        </div>
+    </body>
+
+    </html>
